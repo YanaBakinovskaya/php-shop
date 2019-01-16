@@ -10,6 +10,7 @@ namespace app\controllers;
 use app\models\Good;
 
 use yii\web\Controller;
+use Yii;
 
 class CategoryController extends Controller
 {
@@ -20,8 +21,15 @@ class CategoryController extends Controller
   }
 
   public function actionView($id) {
-    $catGoods = new Good();
-    $catGoods = $catGoods->getGoodsCategories($id);
-    return $this->render('view', compact('catGoods'));
-}
+    $goods = new Good();
+    $goods = $goods->getGoodsCategories($id);
+    return $this->render('view', compact('goods'));
+  }
+
+  public function actionSearch() {
+    $search = Yii::$app->request->get('search');
+    $goods = new Good();
+    $goods = $goods->getSearchResults($search);
+    return $this->render('search', compact('goods', 'search'));
+  }
 }

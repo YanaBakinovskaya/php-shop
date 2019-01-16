@@ -1,9 +1,10 @@
-<?=\app\widgets\MenuWidget::widget()?>
-
 <div class="container">
+
+  <h2 style="text-align: center">Результаты поиска по запросу <?=$search?></h2>
   <div class="row justify-content-center">
 
-    <?php foreach ($goods as $good) { ?>
+    <?php if ($goods) {
+      foreach ($goods as $good) { ?>
       <div class="col-4">
         <div class="product">
           <div class="product-img">
@@ -18,6 +19,8 @@
           </div>
         </div>
       </div>
+    <? }} else { ?>
+      <h4>Ничего не найдено: (</h4>
     <? } ?>
   </div>
 </div>
