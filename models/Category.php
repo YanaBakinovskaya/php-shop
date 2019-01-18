@@ -12,6 +12,14 @@ use yii\db\ActiveRecord;
 
 class Category extends ActiveRecord
 {
+  //private $category = [
+    //'sets' => 'Сет',
+    //'sushi' => 'Суши',
+    //'rolls' => 'Ролл',
+  //];
+ // public function getCategoryNameByCode(string $code){
+   // return $this->category[$code];
+  //}
   public static function tableName()
   {
     return 'category';

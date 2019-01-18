@@ -1,5 +1,5 @@
 <?php
-$this->title = 'Ресторан Суши'.' | '.$good['name'];
+$this->title = 'Ресторан Суши'.' | '.$good['category'].' | '.$good['name'];
 ?>
 
 <div class="container">

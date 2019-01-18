@@ -5,7 +5,9 @@ use yii\helpers\Url;
 ?>
 
 <?php
-$this->title = 'Ресторан Суши'.' | '.$good['category'];
+//foreach ($goods->getAllGoods() as $good):
+//$goods->getCategoryNameByCode($goods[0]['category']);
+$this->title = 'Ресторан Суши'.' | '.$goods[0]['category'];
 ?>
 
 <div class="container">
