@@ -5,7 +5,7 @@ use yii\helpers\Url;
 ?>
 
 <?php
-$this->title = 'Ресторан Суши'.' | '.$category['browser_name'];
+$this->title = 'Ресторан Суши'.' | '.$good['category'];
 ?>
 
 <div class="container">
